@@ -51,7 +51,93 @@
         //     (login == '') ? 'No login' :
         //     '';
 
-        
+        //Rewrite the function using ? or ||
+        // function checkAge(age){
+        //     let confirm = (age > 18) ? 'true':
+        //      'Did parents allow you?';
+        //      return confirm;
+        // }
+        // function checkAge(age){
+        //     let confirm = (age < 18 || age == 18) ? 'Did parents allow you?':
+        //     'true';
+        //     return confirm;
+        // }
+        // //better solution
+        // function checkAge(age){
+        //     return (age>18) ? 'true' :
+        //     confirm('Did parents allow you?');
+        // }
+        // function checkAge(age){
+        //     return (age>18) || confirm('Did parents allow you?');
+        // }
+
+        // //Function min(a, b)
+        // function min(a, b){
+        //     return (a < b) ? a: 
+        //         b;
+        // }
+
+        //Function pow(x,n)
+        // let x = prompt('Please input the base number: ', '');
+        // let n = prompt('Please input the exponent number: ', '');
+
+        // function pow(x, n){
+
+        //     return (x >= 1) ? Math.pow(x, n):
+        //     (x < 1 || n < 1) ? 'Please input a number greater than 1.':
+        //     '';
+        // }
+        // alert(pow(x, n));
+
+        // Assignment JS Fundamentals Part 3
+        // function add7(){
+        //     let num1 = parseFloat(prompt('Please input a number: ', ));
+
+        //     return (isNaN(num1)) ? "Invalid input. Please enter a number.":
+        //     num1 + 7;
+        // }
+        // alert(add7());
+        // // multiply
+        // let a = parseFloat(prompt('Please input the first number: '));
+        // let b = parseFloat(prompt('Please input the second number: '));
+        // function multiply(a, b){
+        //     return (isNaN(a || b)) ? "Invalid input. Please enter a number.":
+        //     a * b;
+        // }
+        // alert(multiply(a, b));
+        // //capitalize
+        // function capitalize(){
+            
+        // }
+        //         function ask(question, yes, no) {
+        //   if (confirm(question)) yes()
+        //   else no();
+        // }
+
+        // function showOk() {
+        //   alert( "You agreed." );
+        // }
+
+        // function showCancel() {
+        //   alert( "You canceled the execution." );
+        // }
+
+        // // usage: functions showOk, showCancel are passed as arguments to ask
+        // ask("Do you agree?", showOk, showCancel);
+
+        //arrow functions
+
+
+        let ask = (question, yes, no) =>
+            (confirm(question)) ?
+            yes():
+            no();
+
+        ask(
+            "Do you agree?",
+            () => { alert("You agreed."); },
+            () => { alert("You canceled the execution.");}
+            );
     </script>
 </body>
 </html>
