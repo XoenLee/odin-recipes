@@ -128,16 +128,58 @@
         //arrow functions
 
 
-        let ask = (question, yes, no) =>
-            (confirm(question)) ?
-            yes():
-            no();
+        // let ask = (question, yes, no) =>
+        //     (confirm(question)) ?
+        //     yes():
+        //     no();
 
-        ask(
-            "Do you agree?",
-            () => { alert("You agreed."); },
-            () => { alert("You canceled the execution.");}
-            );
+        // ask(
+        //     "Do you agree?",
+        //     () => { alert("You agreed."); },
+        //     () => { alert("You canceled the execution.");}
+        //     );
+
+        // let name = prompt("What is your favorite animal?");
+        // function favoriteAnimal(creature) {
+        //     return creature + " is my favorite animal!"
+        //     }
+
+        //     console.log(favoriteAnimal(`${name}`))
+
+        //1.
+        let x = parseFloat(prompt('Please input a number: '));
+        function add7(){
+            return x+7;
+        }
+        console.log(add7());
+        //2.
+        let y = parseFloat(prompt('Please input the multiplier: '));
+        let z = parseFloat(prompt('Please input the multiplicant: '))
+        function multiply(){
+            return y*z;
+        }
+        console.log(multiply());
+        //3.
+        let inputString = window.prompt('Please input a string: ');
+        function capitalize(inputString){
+            let firstLetter = inputString.charAt(0).toUpperCase()
+            let restOfWord = inputString.slice(1);
+
+            return (typeof inputString !== 'string') ? 'Please input a string!':
+            (inputString.charAt(0) === firstLetter) ? 'Already capitalized.':
+            firstLetter + restOfWord;
+
+        }
+        console.log(capitalize(inputString));
+        //4.
+        let inputString2 = window.prompt('Please input a string: ');
+        function lastLettter(inputString2){
+            let length = inputString2.length;
+            let subtractLenght = inputString2[length-1];
+            
+            return subtractLenght;
+        }
+        console.log(lastLettter(inputString2));
     </script>
 </body>
 </html>
