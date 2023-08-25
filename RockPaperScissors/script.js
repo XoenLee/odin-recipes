@@ -24,7 +24,7 @@ let scoreComp = 0;
 
 function game(){
 
-    for (let i = 0; i<5; i++){
+    while (scorePlayer < 5 && scoreComp < 5){
         let validInput = false;
         let playerSelection;
 
@@ -75,9 +75,5 @@ function game(){
     Computer's score: ${scoreComp}
     ${finalMessage}
     `)
-
-    
-
-    
 }
 game();
