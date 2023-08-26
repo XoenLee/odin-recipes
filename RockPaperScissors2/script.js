@@ -8,19 +8,19 @@
 //Start
 function getComputerChoice(){
     let x = Math.floor(Math.random() * 3);
-    let ComputerChoice;
+    let computerChoice;
     switch (x) {
         case 0:
-        ComputerChoice = 'rock';
+        computerChoice = 'rock';
         break;
         case 1:
-        ComputerChoice = 'paper';
+        computerChoice = 'paper';
         break;
         case 2:
-        ComputerChoice = 'scissors';
+        computerChoice = 'scissors';
         break;
     }
-    return ComputerChoice;
+    return computerChoice;
 }
 
 function playRound(playerSelection, computerSelection){
