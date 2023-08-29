@@ -11,21 +11,24 @@
     let secondInput = parseInt(prompt("Input the second integer: "));
     const sumAll = function(firstInput, secondInput) {
         let sumOfIntegers = 0;
+        
         if (firstInput < 0 || secondInput < 0) return 'ERROR 1';
-        if (typeof firstInput == "string" || typeof secondInput == "string") return 'ERROR 2';
-        // if (isNaN(firstInput) || isNaN(secondInput)) return 'ERROR 3';
+
+        //Check if the input is not a number and return an ERROR
+        if (!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+
         if (firstInput<secondInput){
             for (firstInput; firstInput<=secondInput; firstInput++){
-                sumOfIntegers = sumOfIntegers + firstInput;
+                sumOfIntegers += firstInput;
             }
         }else{
             for (firstInput; firstInput>=secondInput; firstInput--){
-                sumOfIntegers = sumOfIntegers + firstInput;
+                sumOfIntegers += firstInput;
             }
         }
         return sumOfIntegers;
     };
-    console.log(sumAll());
+    console.log(sumAll(firstInput, secondInput));
     </script>
 </body>
 </html>
