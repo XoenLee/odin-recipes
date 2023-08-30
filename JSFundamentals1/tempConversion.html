@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const convertToCelsius = function(tempFahr) {
+        let toCelsius = (tempFahr - 32) / 1.8;
+        return Math.round(toCelsius * 10) / 10;
+    };
+
+    const convertToFahrenheit = function(tempCels) {
+        let toFahr = (tempCels * 1.8) + 32;
+        return Math.round(toFahr * 10) / 10;
+    };
+    </script>
+</body>
+</html>
