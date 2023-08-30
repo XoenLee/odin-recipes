@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let yearInput = parseInt(prompt("Please input the year: "));
+    let outPut;
+    function leapYear(yearInput){
+        if (yearInput % 4 == 0) {    
+            if (yearInput % 100 == 0) {
+                if (yearInput % 400 == 0){
+                    return true;
+                }else{
+                    return false}
+            }else{
+                return true;
+            }
+        }else{
+        return false;
+        }
+    }
+    if (leapYear(yearInput)){
+        console.log(`${yearInput} is a leap year.`);
+    } else{
+        console.log(`${yearInput} is not a leap year.`);
+    };
+
+    //better solution below:
+    //const leapYears = function (year) {
+    //   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+    // };
+    </script>
+</body>
+</html>
