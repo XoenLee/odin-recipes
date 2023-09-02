@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const heroes = [
+            { name: 'Superman', power: 9999},
+            { name: 'Wonderwoman', power: 8888},
+            { name: 'The Flash', power: 8888},
+            { name: 'Green Lantern', power: 6666},
+            { name: 'Batman', power: 5555}
+        ];
+        //array filter method function
+        const filterHeroes = heroes.filter((hero) => {
+            return hero.power == 8888;
+        });
+        console.log(filterHeroes);
+
+        //array map method
+        const heroNames = heroes.map((hero) => {
+            return hero.name;
+        });
+        console.log(heroNames);
+
+        //array find method function
+        const findHero = heroes.find((hero) => {
+            return hero.name === 'Green Lantern';
+        });
+        console.log(findHero);
+        
+
+        //array forEach
+        heroes.forEach((hero) => {
+            console.log(hero.power);
+        })
+        
+        //array some method
+        //returns true if even one element satisfy the condition
+        const hasWeakHero = heroes.some((hero) => {
+            return hero.power <= 6000;
+        })
+        console.log(hasWeakHero);
+
+        //array every method
+        //returns true if all of the elements satisfy the condition
+        const allHeroIsWeak = heroes.every((hero) => {
+            return hero.power <= 6000;
+        })
+        console.log(allHeroIsWeak);
+
+        //array reduce method
+        const totalPower = heroes.reduce((currentPower, hero) => {
+            return hero.power + currentPower;
+        }, 0);
+        console.log(totalPower)
+
+        //array includes method
+        const includesPowerful = heroes.includes(9999);
+        console.log(includesPowerful);
+    </script>
+</body>
+</html>
